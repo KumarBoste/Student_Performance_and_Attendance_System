@@ -119,8 +119,8 @@ The Student Performance & Attendance System provides a robust foundation for edu
 - Data-Driven Strategy: Supports institutional decision-making
 
 ## Future Enhancements:
--Integration with learning management systems
--Real-time notifications for poor attendance
--Advanced predictive analytics
--Mobile application development
--Automated report generation
+- Integration with learning management systems
+- Real-time notifications for poor attendance
+- Advanced predictive analytics
+- Mobile application development
+- Automated report generation
