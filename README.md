@@ -1,2 +1,2 @@
-# Student-Performance-Attendance-System-
+# Student Performance & Attendance System 
 PostgreSQL
