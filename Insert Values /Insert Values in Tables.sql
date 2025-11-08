@@ -1,35 +1,45 @@
--- Insert sample data
-INSERT INTO students (first_name, last_name, email, date_of_birth, gender) VALUES
-('John', 'Smith', 'john.smith@email.com', '2000-05-15', 'M'),
-('Sarah', 'Johnson', 'sarah.johnson@email.com', '2001-02-20', 'F'),
-('Michael', 'Brown', 'michael.brown@email.com', '2000-11-08', 'M'),
-('Emily', 'Davis', 'emily.davis@email.com', '2001-07-30', 'F'),
-('David', 'Wilson', 'david.wilson@email.com', '2000-09-12', 'M');
+-- Students
+INSERT INTO students (student_name, class, gender) VALUES
+('Amit Sharma', '10A', 'Male'),
+('Priya Singh', '10A', 'Female'),
+('Rahul Verma', '10B', 'Male'),
+('Sneha Patel', '10B', 'Female'),
+('Vikram Joshi', '10A', 'Male'),
+('Neha Gupta', '10B', 'Female'),
+('Ravi Kumar', '10C', 'Male'),
+('Pooja Mehta', '10C', 'Female'),
+('Karan Yadav', '10A', 'Male'),
+('Anjali Das', '10B', 'Female');
 
-INSERT INTO courses (course_code, course_name, credits, department) VALUES
-('MATH101', 'Calculus I', 4, 'Mathematics'),
-('PHYS101', 'Physics I', 4, 'Physics'),
-('CS101', 'Introduction to Programming', 3, 'Computer Science'),
-('ENG101', 'English Composition', 3, 'English'),
-('HIST101', 'World History', 3, 'History');
+-- Subjects
+INSERT INTO subjects (subject_name, teacher_name) VALUES
+('Mathematics', 'Mr. Rao'),
+('Science', 'Mrs. Iyer'),
+('English', 'Mr. Sinha'),
+('Social Studies', 'Ms. Thomas');
 
-INSERT INTO student_courses (student_id, course_id) VALUES
-(1, 1), (1, 2), (1, 3),
-(2, 1), (2, 3), (2, 4),
-(3, 2), (3, 3), (3, 5),
-(4, 1), (4, 4), (4, 5),
-(5, 2), (5, 3), (5, 4);
+-- Attendance
+INSERT INTO attendance (student_id, subject_id, attendance_percentage) VALUES
+(1, 1, 92.5),
+(2, 1, 88.0),
+(3, 2, 75.0),
+(4, 2, 95.0),
+(5, 3, 80.0),
+(6, 3, 85.5),
+(7, 4, 60.0),
+(8, 4, 70.0),
+(9, 1, 50.0),
+(10, 2, 96.0);
 
--- Insert attendance data
-INSERT INTO attendance (student_id, course_id, attendance_date, status) VALUES
-(1, 1, '2024-01-10', 'Present'), (1, 1, '2024-01-12', 'Present'),
-(1, 1, '2024-01-15', 'Absent'), (2, 1, '2024-01-10', 'Present'),
-(2, 1, '2024-01-12', 'Late'), (3, 2, '2024-01-11', 'Present');
-
--- Insert performance data
-INSERT INTO performance (student_id, course_id, semester, assignment_score, midterm_score, final_score, grade) VALUES
-(1, 1, 'Spring2024', 85, 78, 82, 'B'),
-(1, 2, 'Spring2024', 92, 88, 90, 'A'),
-(2, 1, 'Spring2024', 78, 82, 80, 'B'),
-(2, 3, 'Spring2024', 65, 70, 68, 'C'),
-(3, 2, 'Spring2024', 88, 85, 86, 'B');
+-- Marks
+INSERT INTO marks (student_id, subject_id, marks_obtained) VALUES
+(1, 1, 88),
+(2, 1, 90),
+(3, 2, 65),
+(4, 2, 92),
+(5, 3, 75),
+(6, 3, 80),
+(7, 4, 55),
+(8, 4, 60),
+(9, 1, 40),
+(10, 2, 95);
