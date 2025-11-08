@@ -63,6 +63,9 @@ CREATE TABLE marks (
     marks_obtained INT CHECK (marks_obtained BETWEEN 0 AND 100)
 );
 ```
+## ER Diagram 
+![Er diagram](https://github.com/KumarBoste/Student_Performance_and_Attendance_System/blob/main/ER%20Diagram/ER%20Diagram.png)
+
 ## SWOT Analysis
 | Factor | Description |
 |--------|-------------|
