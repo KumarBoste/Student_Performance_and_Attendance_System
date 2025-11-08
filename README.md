@@ -18,7 +18,7 @@ This system aims to solve these issues by maintaining a structured database in P
 ## DataBase & Tools:
 - PostgreSQL
 - PgAdmin4
-- 
+
 ## Database Schema 
 
 ``` sql
