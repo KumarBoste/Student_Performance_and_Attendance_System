@@ -157,5 +157,6 @@ JOIN students s ON a.student_id = s.student_id
 GROUP BY s.class;
 
 -- ============================================================
--- END OF PROJECT SCRIPT
+-- END 
 -- ============================================================
+
