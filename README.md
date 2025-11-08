@@ -12,6 +12,7 @@ Educational institutions often face challenges in evaluating the link between st
 - Identify students with low attendance or grades.
 - Analyze subject-wise performance trends.
 - Support teachers with actionable insights.
+
 This system aims to solve these issues by maintaining a structured database in PostgreSQL that connects students, subjects, attendance, and marks.
 
 ## DataBase & Tools:
