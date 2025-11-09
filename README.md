@@ -16,10 +16,18 @@ Educational institutions often face challenges in evaluating the link between st
 This system aims to solve these issues by maintaining a structured database in PostgreSQL that connects students, subjects, attendance, and marks.
 
 ## DataBase & Tools:
-- PostgreSQL
-- PgAdmin4
+- **Database :** PostgreSQL
+- **Tool :** PgAdmin4
 
 ## Database Schema 
+### Overview of the Schema :
+The Schema consists of 4 interconnected tables that provide insights into the **"Student Performance & Attendance System"**.
+
+The Project involves multiple tables :
+- Students
+- Subjects
+- Attendance
+- Marks
 
 ``` sql
 --  CREATE DATABASE
