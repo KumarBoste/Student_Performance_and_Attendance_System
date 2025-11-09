@@ -82,10 +82,12 @@ CREATE TABLE marks (
 
 -- 1. List all students
 SELECT * FROM students;
+-- Question: Show all details of students in the database.
 -- Insight: Displays all student details — used for verification and roster generation.
 
 -- 2. Show all subjects and teachers
 SELECT subject_name, teacher_name FROM subjects;
+-- Question: Which subjects are taught, and who teaches them?
 -- Insight: Displays all student details — used for verification and roster generation.
 
 -- 3. Display student attendance details
@@ -93,10 +95,12 @@ SELECT s.student_name, sub.subject_name, a.attendance_percentage
 FROM attendance a
 JOIN students s ON a.student_id = s.student_id
 JOIN subjects sub ON a.subject_id = sub.subject_id;
+-- Question: Show each student’s attendance percentage per subject
 -- Insight: Gives attendance data for each student per subject. 
 
 -- 4. Find students in class ‘10A’z
 SELECT student_name FROM students WHERE class = '10A';
+-- Question: List the names of all students belonging to class 10A.
 -- Insight: Helps teachers or class monitors view class-wise lists.
 
 -- 5. Show all students who scored more than 80 marks
@@ -105,6 +109,7 @@ FROM marks m
 JOIN students s ON m.student_id = s.student_id
 JOIN subjects sub ON m.subject_id = sub.subject_id
 WHERE m.marks_obtained > 80;
+-- Question: Which students scored above 80 in any subject?
 -- Insight: Identifies top performers in each subject.
 ```
 
@@ -129,6 +134,7 @@ FROM attendance a
 JOIN marks m ON a.student_id = m.student_id AND a.subject_id = m.subject_id
 JOIN students s ON s.student_id = a.student_id
 ORDER BY a.attendance_percentage DESC;
+-- Question: Is there a link between attendance percentage and marks obtained?
 -- Insight: Observe if students with higher attendance generally have higher marks.
 
 -- 8. Identify students with attendance below 70%
@@ -136,6 +142,7 @@ SELECT s.student_name, a.attendance_percentage
 FROM attendance a
 JOIN students s ON a.student_id = s.student_id
 WHERE a.attendance_percentage < 70;
+-- Question: Which students have poor attendance (less than 70%)?
 -- Insight: Helps mark students at risk of poor performance due to absenteeism.
 
 -- 9. Rank students by total marks
@@ -144,6 +151,7 @@ SELECT s.student_name, SUM(m.marks_obtained) AS total_marks,
 FROM marks m
 JOIN students s ON m.student_id = s.student_id
 GROUP BY s.student_name;
+-- Question: Rank students based on their overall total marks.
 -- Insight: Gives leaderboard-style ranking — useful for merit lists.
 
 -- 10. Average attendance per class
@@ -151,6 +159,7 @@ SELECT s.class, ROUND(AVG(a.attendance_percentage),2) AS avg_attendance
 FROM attendance a
 JOIN students s ON a.student_id = s.student_id
 GROUP BY s.class;
+-- Question: Which class maintains better average attendance overall?
 -- Insight: Determines which class maintains better attendance discipline.
 ```
 
