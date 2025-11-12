@@ -81,12 +81,14 @@ CREATE TABLE marks (
 -- ============================================================
 
 -- 1. List all students
-SELECT * FROM students;
+SELECT *
+FROM students;
 -- Question: Show all details of students in the database.
 -- Insight: Displays all student details — used for verification and roster generation.
 
 -- 2. Show all subjects and teachers
-SELECT subject_name, teacher_name FROM subjects;
+SELECT subject_name, teacher_name
+FROM subjects;
 -- Question: Which subjects are taught, and who teaches them?
 -- Insight: Displays all student details — used for verification and roster generation.
 
@@ -99,7 +101,9 @@ JOIN subjects sub ON a.subject_id = sub.subject_id;
 -- Insight: Gives attendance data for each student per subject. 
 
 -- 4. Find students in class ‘10A’z
-SELECT student_name FROM students WHERE class = '10A';
+SELECT student_name
+FROM students
+WHERE class = '10A';
 -- Question: List the names of all students belonging to class 10A.
 -- Insight: Helps teachers or class monitors view class-wise lists.
 
